@@ -9,7 +9,7 @@ const resposta1 = window.prompt(Pergunta1).toUpperCase();
 
 // VERIFICAÇÃO DA PRIMEIRA RESPOSTA
 if (resposta1 == "SIM") {
-   
+    
     // ATRIBUINDO ESTILOS A RESPOSTA
     document.getElementById("resposta1").style.color = '#00F';
     document.getElementById("resposta1").style.fontSize = '20px';
@@ -39,6 +39,14 @@ if (resposta1 == "SIM") {
          [ 2 ] Para virtuais`.toUpperCase();
         const resposta3 = parseInt(window.prompt(Pergunta3));
 
+        // LOOP DE VERIFICAÇÃO DA ESCOLHA ERRADA
+        while (resposta3 !== 1 || resposta3 !== 2) {
+            Pergunta3 = document.getElementById("pergunta3").textContent = `Amigos reais ou virtuais?
+            [ 1 ] Para reais
+            [ 2 ] Para virtuais`.toUpperCase();
+            resposta3 = parseInt(window.prompt(Pergunta3));
+        }
+        
         // VERIFICAÇÃO DA TERCEIRA RESPOSTA
         // COM BASE EM VALORES EXATOS
         switch (resposta3) {
